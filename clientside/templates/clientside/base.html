@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load livereload_tags %}
 {% load static %}
 <html lang="en">
 <head>
@@ -9,6 +10,16 @@
     <title>1SK - {% block title %} {% endblock title %}</title>
 </head>
 <body>
+    <div class="flex flex-col">
+        <div class="flex-col">
+            <img src="{% static 'images/logo.png' %}" class="h-32 ml-3">
+            <a href="#" class="cursor-pointer hover:underline">Home</a>
+            <a href="#" class="cursor-pointer">Blogs</a>
+            <a href="#" class="cursor-pointer">About Us</a>
+            <a href="#" class="cursor-pointer">Contact Us</a>
+        </div>
+    </div>
     {% block main_content %}{% endblock main_content %}
+    {% livereload_script %}
 </body>
 </html>
